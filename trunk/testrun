@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+if test "$1" '=' '-debug'
+then
+  EXC='gdb'
+  shift
+else
+  EXC='exec'
+fi
+echo $EXC
+make && make install && $EXC `which picdb_test` $*

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso8859-1" ?>
+<!ELEMENT config (config|option)*>
+<!ELEMENT option EMPTY>
+<!ELEMENT include EMPTY>
+
+
+<!ATTLIST config name CDATA #REQUIRED>
+<!ATTLIST option name CDATA #REQUIRED value CDATA #REQUIRED type (int|bool|str) #IMPLIED>
+<!ATTLIST include file CDATA #REQUIRED>

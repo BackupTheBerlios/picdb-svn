@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<config name=''>
+  <config name='web' >
+    <option name='port' value='2050' type='int'/>
+  </config>
+  <config name='remdb'>
+    <option name='port' value='2049' type='int'/>
+    <option name='auth' value='user' type='str'/>
+    <config name='users'>
+      <option name='names' value='segfault,guest' type='xlist'/>
+      <config name='passwords'>
+        <option name='guest' value='' type='none'/>
+        <option name='segfault' value='f00f' type='str'/>
+      </config>
+      <config name='permissions'>
+        <option name='guest' value='r' type='list'/>
+        <option name='segfault' value='rw' type='list'/>
+      </config>
+    </config>
+  </config>
+  <config name='sync'>
+    <config name='server'>
+      <option name='port' value='2051' type='int'/>
+    </config>
+    <config name='client'>
+    </config>
+  </config>
+  <config name='picdb'>
+    <option name='backends' value='file' type='str'/>
+    <option name='backenddir' value='backends/libs/' type='str'/>
+    <config name='backends'>
+      <config name='file'>
+        <option name='basedir' value='/home/segfault/Documents/Pictures' type='str'/>
+      </config>
+      <config name='sqlite'>
+      </config>
+      <include file='mysqlcfg.xml'>
+      <include file='pgsqlcfg.xml'>
+    </config>
+  </config>
+</config>

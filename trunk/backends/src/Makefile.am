@@ -1,0 +1,11 @@
+#lib_LTLIBRARIES = libpicdb.la
+#noinst_LTLIBRARIES = libpicdb.la
+#libpicdb_la_SOURCES = backend.cc config.cc db.cc exception.cc filedata.cc filelist.cc image.cc logger.cc memorymanager.cc warning.cc xml.cc xmllogstream.cc
+#libpicdb_la_LDFLAGS = -version-info 3:12:1
+lib_LTLIBRARIES = libpicdbbefile.la #libpicdbbesqlite.la
+libpicdbbefile_la_SOURCES = file.cc
+libpicdbbefile_la_CFLAGS = -I../../include -I../include
+libpicdbbefile_la_LIBS = -L../../src/.libs
+#libpicdbbesqlite_la_SOURCES = sqlite.cc
+#libpicdbbesqlite_la_CFLAGS = -I../../include -I../include
+#libpicdbbesqlite_la_LIBS = -L../../src/.libs -lsqlite
